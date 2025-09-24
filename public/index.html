@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anon Doubt Room — Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>🔒 Anon Doubt Room</h1>
+
+      <div id="loginArea" class="card">
+        <h3>Join</h3>
+        <div>
+          <label>Student name (optional)</label>
+          <input id="nameInput" placeholder="e.g. Mohit" />
+          <button id="joinStudentBtn" class="btn">Join as Student</button>
+        </div>
+        <hr />
+        <div>
+          <label>Teacher password</label>
+          <input id="teacherPass" placeholder="teacher password" type="password" />
+          <button id="joinTeacherBtn" class="btn btn-strong">Login as Teacher</button>
+          <div id="loginMsg" class="hint"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Live Users</h3>
+        <div>Teachers: <b id="teacherCount">0</b></div>
+        <div>Students: <b id="studentCount">0</b></div>
+      </div>
+
+      <div class="card">
+        <h3>Upload Question / Solution</h3>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <input id="uploaderName" placeholder="Your name (optional)" />
+          <input id="fileInputSidebar" type="file" />
+          <button type="submit" class="btn">Upload</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Voice</h3>
+        <button id="recordBtn" class="btn">🎤 Start Recording</button>
+      </div>
+    </aside>
+
+    <main class="chat">
+      <header class="chatHeader">
+        <h2>Classroom Doubt Stream</h2>
+        <div id="roleDisplay" class="role">Not joined</div>
+      </header>
+
+      <section id="messages" class="messages"></section>
+
+      <footer class="composer">
+        <input id="textInput" placeholder="Type doubt or question..." />
+        <input id="fileInput" type="file" />
+        <button id="sendBtn" class="btn btn-strong">Send</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

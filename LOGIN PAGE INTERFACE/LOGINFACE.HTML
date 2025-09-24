@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* Body with radial gradient (black sun glow effect) */
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at center, 
+                  #000000 0%,        /* black core */
+                  #222222 20%,       /* dark shadow */
+                  #555555 40%,       /* lighter glow */
+                  #aaaaaa 70%,       /* more spread */
+                  #ffffff 100%);     /* white edges */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Login box styled like a "black sun" */
+    .login-box {
+      background: #000000; /* solid black */
+      padding: 40px;
+      border-radius: 50%; /* circular box */
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 0 40px 20px rgba(0,0,0,0.9); /* glowing shadow */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Title */
+    .login-box h1 {
+      color: skyblue;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Labels */
+    .label-blue {
+      display: block;
+      text-align: left;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: skyblue;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* Input fields */
+    input[type="text"],
+    input[type="password"] {
+      width: 220px;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* Login button */
+    button {
+      width: 220px;
+      padding: 10px;
+      background: skyblue;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: deepskyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>LOGIN</h1>
+    <form>
+      <label for="username" class="label-blue">USERNAME</label>
+      <input type="text" id="username" placeholder="ROLL NUMBER OR EMAIL ID ">
+
+      <label for="password" class="label-blue">PASSWORD</label>
+      <input type="password" id="password" placeholder="Enter Password">
+
+      <button type="submit">ENTER</button>
+    </form>
+  </div>
+</body>
+</html>
